@@ -1,12 +1,9 @@
-//listen for click on .container
-//add class to all p besides the one near to hidden
-//add class of border to all sections beside the one clicked
+const section = document.querySelectorAll('.container');
+const hideOnClick = (e => e.currentTarget
+    .nextElementSibling
+    .classList.toggle('hidden'));
+
+section.forEach(container => container.addEventListener('click', hideOnClick));
+
 //change svg for minus
-// //add animation
-function hideOnClick() {
-    const section = document.querySelectorAll('.container');
-    const toggleBorder = section.forEach(container => container.classList.toggle('border'));
-    console.log(toggleBorder);
-    section.forEach(
-        container => container.addEventListener('click', e => console.log(e.currentTarget)))
-};
+// figure out how to do animation from display: none;
