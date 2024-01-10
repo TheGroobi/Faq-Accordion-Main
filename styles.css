@@ -2,6 +2,7 @@
 :root {
     --white: hsl(0, 0%, 100%);
     --light-pink: hsl(275, 100%, 97%);
+    --light-pink-darker: hsla(290, 32%, 66%, 0.445);
     --grayish-purple: hsl(292, 16%, 49%);
     --dark-purple: hsl(292, 42%, 14%);
 }
@@ -12,7 +13,6 @@
 
 body { 
     font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
     margin: 0;
     color: var(--dark-purple);
     background: var(--light-pink);
@@ -29,35 +29,64 @@ body {
     flex-direction: column;
     justify-content: center;
     border-radius: 20px;
-    padding: 3em;
+    padding: 48px;
+    padding-bottom: 1em;
+    box-shadow: 0 10px 100px var(--light-pink-darker);
 }
 
 .container {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
-
-.hero {
+.container.border {
+    border-top: 1px solid var(--light-pink);
+}
+.hero-container {
+    display: inline-flex;
+    align-items: center;
     justify-content: flex-start;
+    padding-bottom: 20px;
 }
 
 h2, h1 {
-    margin: 0
+    margin: 0;
+
 }
 
 h1 { 
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: 700;
+    padding-left: 0.5em;
 }
 
 h2 {
     font-weight: 600;
-    font-size: 1.35em;
-    margin: 1.5em 0;
+    font-size: 1.3em;
+    margin: 1em 0;
+    width: 100%;
+}
+
+h2:focus,
+h2:hover,
+.hover-button:hover,
+.hover-button:focus {
+    cursor: pointer;
+    color: #AD28EB;
+}
+
+h2[class="bigger-padding"] {
+    margin:35px 0;
+    box-sizing: content-box;
 }
 
 p {
     font-weight: 400;
-    color: var(--grayish-purple)
+    color: var(--grayish-purple);
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 1.7em;
+    margin-top: 0.7em;
 }
+/* finish the box shadow index so it's behind the graphic*/
