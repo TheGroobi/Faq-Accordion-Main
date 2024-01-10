@@ -2,7 +2,7 @@
 :root {
     --white: hsl(0, 0%, 100%);
     --light-pink: hsl(275, 100%, 97%);
-    --light-pink-darker: hsla(290, 32%, 66%, 0.445);
+    --light-pink-darker: hsla(290, 32%, 66%, 0.322);
     --grayish-purple: hsl(292, 16%, 49%);
     --dark-purple: hsl(292, 42%, 14%);
 }
@@ -29,9 +29,15 @@ body {
     flex-direction: column;
     justify-content: center;
     border-radius: 20px;
-    padding: 48px;
+    padding: 50px;
     padding-bottom: 1em;
-    box-shadow: 0 10px 100px var(--light-pink-darker);
+    box-shadow: 0 40px 40px var(--light-pink-darker);
+    z-index: 2;
+}
+
+.background-img {
+    z-index: 1;
+    position: absolute;
 }
 
 .container {
@@ -40,14 +46,16 @@ body {
     justify-content: space-between;
     width: 100%;
 }
+
 .container.border {
     border-top: 1px solid var(--light-pink);
 }
+
 .hero-container {
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 h2, h1 {
@@ -64,8 +72,9 @@ h1 {
 h2 {
     font-weight: 600;
     font-size: 1.3em;
-    margin: 1em 0;
+    margin: 35px 0;
     width: 100%;
+    box-sizing: content-box;
 }
 
 h2:focus,
@@ -75,19 +84,13 @@ h2:hover,
     cursor: pointer;
     color: #AD28EB;
 }
-
-h2[class="bigger-padding"] {
-    margin:35px 0;
-    box-sizing: content-box;
-}
-
 p {
     font-weight: 400;
     color: var(--grayish-purple);
     font-size: 1.2em;
     line-height: 1.5;
-    margin-bottom: 1.7em;
-    margin-top: 0.7em;
+    margin-bottom: 25px;
+    margin-top: 0em;
     transition: display 200ms, opacity 200ms;
     display: block;
     opacity: 1;
@@ -96,4 +99,51 @@ p[class="hidden"] {
     display: none;
     opacity: 0;
 }
+
+.hover-button {
+    transform: scale(1.2);
+}
 /* finish the box shadow index so it's behind the graphic*/
+
+@media only screen and (max-width: 375px){ 
+    body {
+        font-size: 80%;
+        overflow: hidden;
+    }
+    
+    .hero-container {
+        padding: 0;
+    }
+
+    .background-img {
+        transform: translate(-28%, -28%);
+    }
+
+    .wrapper {
+        padding: 25px;
+        padding-bottom: 0;
+        width: 88%;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2[class="bigger-padding"] {
+        margin: 25px 0;
+    }
+
+    .star {
+        transform: scale(0.6);
+    }
+
+    p {
+        line-height:1.4;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+    .hover-button {
+        margin-left: 1em;
+    }
+}
