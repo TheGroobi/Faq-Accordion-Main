@@ -24,7 +24,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [GitHub](https://github.com/TheGroobi/Faq-Accordion-Main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://faq-accordion-main-six.vercel.app/)
 
 ## My process
 
