@@ -104,16 +104,15 @@ p[class="hidden"] {
 
 @media only screen and (min-width: 750px) {
     .wrapper{
-    min-width: 720px;
+    min-width: 720px !important;
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (min-width: 376px) {
     .wrapper{
-    min-width: 500px;
+    min-width: 370px;
     }
 }
-
 
 @media only screen and (max-width: 375px) { 
     body {
