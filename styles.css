@@ -33,9 +33,6 @@ body {
     padding-bottom: 1em;
     box-shadow: 0 40px 40px var(--light-pink-darker);
 }
-.background-img {
-    transform: scale(1.5);
-}
 
 .container {
     display: inline-flex;
